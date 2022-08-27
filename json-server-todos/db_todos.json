@@ -15,12 +15,12 @@
     {
       "id": 3,
       "text": "Learn React JS",
-      "completed": true,
+      "completed": false,
       "color": "yellow"
     },
     {
       "text": "Learn Redux Basics",
-      "completed": true,
+      "completed": false,
       "id": 4,
       "color": "red"
     },
@@ -42,7 +42,7 @@
     },
     {
       "text": "Test",
-      "completed": false,
+      "completed": true,
       "id": 8
     },
     {
