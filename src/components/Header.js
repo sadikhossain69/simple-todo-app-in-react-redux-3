@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import DoubleTick from '../assets/double-tick.png'
 import Plus from '../assets/plus.png'
 import { added, allCompleted, clearCompleted } from '../redux/todos/actions';
+import addTodo from '../redux/todos/thunk/addTodos';
 
 const Header = () => {
 
@@ -15,7 +16,7 @@ const Header = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        dispatch(added(input))
+        dispatch(addTodo(input))
         setInput('')
     }
 
