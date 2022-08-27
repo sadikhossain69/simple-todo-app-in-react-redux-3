@@ -33,7 +33,8 @@
     {
       "text": "learn Redux",
       "completed": false,
-      "id": 6
+      "id": 6,
+      "color": "green"
     },
     {
       "text": "Learn Redux Toolkit",
