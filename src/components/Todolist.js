@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Todo from './Todo';
+import { useDispatch } from 'react-redux';
+import fetchTodos from '../redux/todos/thunk/fetchTodos';
 
 const Todolist = () => {
 
     const todos = useSelector((state => state.todos))
     const filters = useSelector(state => state.filters)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(fetchTodos)
+    }, [dispatch])
 
     return (
         <>
@@ -29,7 +36,7 @@ const Todolist = () => {
                         })
                         .filter(todo => {
                             const { colors } = filters
-                            if(colors.length > 0) {
+                            if (colors.length > 0) {
                                 return colors.includes(todo?.color)
                             }
                             return true
